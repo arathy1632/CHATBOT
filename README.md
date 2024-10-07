@@ -6,7 +6,7 @@ The FastAPI backend processes the data, and the Streamlit frontend provides a si
 
 ## Features
 
-Dataset Uploading: Upload single or multiple datasets (e.g., CSV or Excel files).//
+Dataset Uploading: Upload single or multiple datasets (e.g., CSV or Excel files).\n
 Conversational Interaction: Query uploaded datasets in natural language.//
 Dataset Comparison: Compare two datasets and get insights based on user questions.//
 Streamlit Frontend: Easy-to-use web interface for interaction.//
