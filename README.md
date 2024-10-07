@@ -6,20 +6,30 @@ The FastAPI backend processes the data, and the Streamlit frontend provides a si
 
 ## Features
 
-Dataset Uploading: Upload single or multiple datasets (e.g., CSV or Excel files).\n
-Conversational Interaction: Query uploaded datasets in natural language.//
-Dataset Comparison: Compare two datasets and get insights based on user questions.//
-Streamlit Frontend: Easy-to-use web interface for interaction.//
+Dataset Uploading: Upload single or multiple datasets (e.g., CSV or Excel files).
+
+Conversational Interaction: Query uploaded datasets in natural language.
+
+Dataset Comparison: Compare two datasets and get insights based on user questions.
+
+Streamlit Frontend: Easy-to-use web interface for interaction.
+
 FastAPI Backend: Powerful API for processing data and managing chat requests.
 
 ## Technologies Used
 
 Frontend: Streamlit
+
 Backend: FastAPI, Uvicorn
-Natural Language Processing: OpenAI API (if applicable)
+
+Retreival Augmented Generation: OpenAI gpt-3.5-turbo model 
+
 Vector Store: FAISS
+
 Other Libraries: Pandas, Langchain, Requests, and Streamlit-Chat
 
 ## Live Demo
+
 Backend (FastAPI): https://chatbot-mwsb.onrender.com
+
 Frontend (Streamlit): https://chatbot-meefpragk7bgl3tb8x7mhv.streamlit.app/
