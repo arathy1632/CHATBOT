@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_chat import message
 import requests
+import pandas as pd  # Import pandas to load and display the dataset
 
 # Sidebar for API Key input
 user_api_key = st.sidebar.text_input(
@@ -16,7 +17,6 @@ mode = st.sidebar.selectbox(
 )
 
 # API endpoints for backend
-# BACKEND_URL = "http://127.0.0.1:8000"
 BACKEND_URL = "https://chatbot-mwsb.onrender.com"
 
 # Function to reset session state for new files or new mode
@@ -94,8 +94,17 @@ if mode == "Chat with your dataset":
             if response.get("status") == "File uploaded and processed successfully":
                 reset_chat_history()
                 st.session_state['file_name'] = uploaded_file.name
+                # Load dataset into a pandas DataFrame
+                if uploaded_file.name.endswith('.csv'):
+                    st.session_state['data'] = pd.read_csv(uploaded_file)
+                else:
+                    st.session_state['data'] = pd.read_excel(uploaded_file)
             else:
                 st.error("Failed to upload file to the backend.")
+
+        # Show dataset in an expandable DataGrid
+        with st.expander("View Dataset"):
+            st.dataframe(st.session_state['data'], use_container_width=True)
 
         # Container for the chat history
         response_container = st.container()
@@ -136,8 +145,24 @@ elif mode == "Compare Datasets":
                 reset_chat_history()
                 st.session_state['file_name1'] = uploaded_file1.name
                 st.session_state['file_name2'] = uploaded_file2.name
+                # Load both datasets into pandas DataFrames
+                if uploaded_file1.name.endswith('.csv'):
+                    st.session_state['data1'] = pd.read_csv(uploaded_file1)
+                else:
+                    st.session_state['data1'] = pd.read_excel(uploaded_file1)
+                if uploaded_file2.name.endswith('.csv'):
+                    st.session_state['data2'] = pd.read_csv(uploaded_file2)
+                else:
+                    st.session_state['data2'] = pd.read_excel(uploaded_file2)
             else:
                 st.error("Failed to upload files to the backend.")
+
+        # Show both datasets in expandable DataGrids
+        with st.expander("View Dataset 1"):
+            st.dataframe(st.session_state['data1'], use_container_width=True)
+
+        with st.expander("View Dataset 2"):
+            st.dataframe(st.session_state['data2'], use_container_width=True)
 
         # Container for the comparison chat history
         response_container = st.container()
