@@ -40,7 +40,15 @@ vectors_1 = None
 vectors_2 = None
 chain_1 = None
 chain_2 = None
-
+basePrompt = """
+    You are an intelligent assistant. Provide the most accurate answer based on the provided dataset.
+    
+    {context}
+    
+    Question: {question}
+    Answer here:
+"""
+PROMPT = PromptTemplate(template=basePrompt, input_variables=["context", "question"])
 @app.post("/uploadfile/")
 async def upload_file(file: UploadFile, api_key: str = Form(...)):
     os.environ["OPENAI_API_KEY"] = api_key
@@ -64,7 +72,8 @@ async def upload_file(file: UploadFile, api_key: str = Form(...)):
     # Initialize the conversational retrieval chain for the dataset
     chain_1 = ConversationalRetrievalChain.from_llm(
         llm=ChatOpenAI(temperature=0.0, model_name='gpt-3.5-turbo'),
-        retriever=vectors_1.as_retriever()
+        retriever=vectors_1.as_retriever(),
+        combine_docs_chain_kwargs={"prompt": PROMPT},
     )
    
     return {"status": "File uploaded and processed successfully"}
@@ -97,12 +106,14 @@ async def upload_files(file1: UploadFile, file2: UploadFile, api_key: str = Form
     # Initialize the conversational retrieval chains for both datasets
     chain_1 = ConversationalRetrievalChain.from_llm(
         llm=ChatOpenAI(temperature=0.0, model_name='gpt-3.5-turbo'),
-        retriever=vectors_1.as_retriever()
+        retriever=vectors_1.as_retriever(),
+        combine_docs_chain_kwargs={"prompt": PROMPT},
     )
     
     chain_2 = ConversationalRetrievalChain.from_llm(
         llm=ChatOpenAI(temperature=0.0, model_name='gpt-3.5-turbo'),
-        retriever=vectors_2.as_retriever()
+        retriever=vectors_2.as_retriever(),
+        combine_docs_chain_kwargs={"prompt": PROMPT},
     )
 
     return {"status": "Files uploaded and processed successfully"}
