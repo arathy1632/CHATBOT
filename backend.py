@@ -4,6 +4,7 @@ from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.document_loaders import CSVLoader
+from langchain.prompts import PromptTemplate
 from langchain.schema import Document
 from pydantic import BaseModel
 import os
