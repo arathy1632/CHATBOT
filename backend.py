@@ -43,8 +43,8 @@ chain_1 = None
 chain_2 = None
 # Define a custom prompt template
 basePrompt = """
-    You are an intelligent assistant. Give the accurate and specific answer based on the provided dataset.
-    Donot hallucinate. If you dont know the answer say "I dont know".
+    You are an intelligent assistant. Give specific and accurate answer based on the provided dataset.
+    Donot hallucinate. If you dont konw the answer say "I dont know".
     
     {context}
     
