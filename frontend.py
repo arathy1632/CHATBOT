@@ -17,7 +17,7 @@ mode = st.sidebar.selectbox(
 )
 
 # API endpoints for backend
-BACKEND_URL = "https://chatbot-mwsb.onrender.com"
+BACKEND_URL = "http://127.0.0.1:8000"
 
 # Function to reset session state for new files or new mode
 def reset_chat_history():
@@ -80,6 +80,12 @@ def compare_datasets(query):
     
     return result['answer']
 
+# Function to clear chat messages and reset memory
+def clear_chat():
+    reset_chat_history()
+    st.session_state['past'] = []
+    st.session_state['generated'] = []
+
 # Chat with your dataset Mode
 if mode == "Chat with your dataset":
     st.title("Chat with your dataset")
@@ -128,6 +134,10 @@ if mode == "Chat with your dataset":
                 for i in range(len(st.session_state['generated'])):
                     message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="adventurer")
                     message(st.session_state["generated"][i], key=str(i), avatar_style="bottts")
+
+        # Add a button to clear chat history
+        if st.button("Clear Chat"):
+            clear_chat()
 
 # Compare Datasets Mode
 elif mode == "Compare Datasets":
@@ -187,3 +197,6 @@ elif mode == "Compare Datasets":
                     message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="adventurer")
                     message(st.session_state["generated"][i], key=str(i), avatar_style="bottts")
 
+        # Add a button to clear comparison chat history
+        if st.button("Clear Chat"):
+            clear_chat()
