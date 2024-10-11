@@ -4,8 +4,8 @@ from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.document_loaders import CSVLoader
-from langchain.prompts import PromptTemplate
 from langchain.schema import Document
+from langchain.prompts import PromptTemplate
 from pydantic import BaseModel
 import os
 import pandas as pd
@@ -41,8 +41,10 @@ vectors_1 = None
 vectors_2 = None
 chain_1 = None
 chain_2 = None
+# Define a custom prompt template
 basePrompt = """
-    You are an intelligent assistant. Provide the most accurate answer based on the provided dataset.
+    You are an intelligent assistant. Provide the accurate answer based on the provided dataset.
+    Donot hallucinate. If you dont konw the answer say "I dont know".
     
     {context}
     
@@ -50,6 +52,7 @@ basePrompt = """
     Answer here:
 """
 PROMPT = PromptTemplate(template=basePrompt, input_variables=["context", "question"])
+
 @app.post("/uploadfile/")
 async def upload_file(file: UploadFile, api_key: str = Form(...)):
     os.environ["OPENAI_API_KEY"] = api_key
