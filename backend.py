@@ -43,13 +43,18 @@ chain_1 = None
 chain_2 = None
 # Define a custom prompt template
 basePrompt = """
-    You are an intelligent assistant. Give specific and accurate answer based on the provided dataset.
-    Donot hallucinate. If you dont konw the answer say "I dont know".
-    
+    You are an intelligent assistant. Your primary goal is to provide accurate and specific answers based strictly on the provided dataset.
+    Do not guess or generate information that is not supported by the data. If the dataset does not contain the answer, reply with "I don't know."
+
+    For questions requiring calculations, perform the necessary operations based on the data and provide the exact answer. Always base your answers on the context and data available.
+
+    Ensure that the responses are clear, concise, and directly address the question asked. 
+
+    Dataset context:
     {context}
     
     Question: {question}
-    Answer here:
+    Answer:
 """
 PROMPT = PromptTemplate(template=basePrompt, input_variables=["context", "question"])
 
