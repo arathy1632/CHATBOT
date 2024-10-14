@@ -19,7 +19,7 @@ mode = st.sidebar.selectbox(
 )
 
 # API endpoints for backend
-BACKEND_URL = "http://127.0.0.1:8000"
+BACKEND_URL = "https://chatbot-mwsb.onrender.com"
 
 # Keywords to trigger PandasAI block
 keywords = ["plot", "graph", "calculate", "how many", "sum", "average", "mean", "median", "max", "min"]
