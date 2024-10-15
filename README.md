@@ -16,7 +16,9 @@ This project is a chatbot application designed to provide users with an intuitiv
 
 ## **Technologies Used**
 
-**Frontend:** Streamlit (for building a user-friendly web interface)
+**Frontend:** 
+
+Streamlit (for building a user-friendly web interface)
 
 **Backend:**
 
@@ -24,7 +26,7 @@ FastAPI (for handling API requests)
 
 Uvicorn (for running the FastAPI server)
 
-Retrieval Augmented Generation (RAG):
+**Retrieval Augmented Generation (RAG):**
 
 Utilizes OpenAI GPT-3.5-Turbo to process natural language queries and generate meaningful responses based on the data.
 
