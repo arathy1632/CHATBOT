@@ -1,9 +1,9 @@
-#Chatbot with FastAPI and Streamlit
-
+ # **Chatbot with FastAPI and Streamlit**
 
 This project is a chatbot application designed to provide users with an intuitive interface to interact with datasets using natural language. The application leverages FastAPI for the backend processing and Streamlit for the frontend interface, offering users a seamless way to upload datasets, query them, and even compare two datasets interactively. The combination of cutting-edge technologies ensures that users can engage with their data in a conversational and visual manner.
 
-Features
+**Features**
+
 Dataset Uploading: Users can upload one or multiple datasets in various formats (e.g., CSV or Excel files).
 
 Conversational Interaction: Ask questions and query uploaded datasets in natural language through a chatbot interface. The backend processes these queries and returns the relevant results or visualizations.
@@ -14,7 +14,8 @@ Streamlit Frontend: An easy-to-use, interactive web interface that allows users 
 
 FastAPI Backend: A powerful, fast backend that handles data processing, queries, and manages communication between the frontend and the conversational model.
 
-Technologies Used
+**Technologies Used**
+
 Frontend: Streamlit (for building a user-friendly web interface)
 
 Backend:
@@ -35,7 +36,10 @@ Other Libraries:
 Langchain: Orchestrates communication between the OpenAI model and data management processes.
 Requests: For handling HTTP requests.
 Streamlit-Chat: To manage the chatbot-like conversation interface on the frontend.
-Workflow Overview
+
+
+**Workflow Overview**
+
 Data Upload: Users upload datasets via the Streamlit interface.
 
 Conversational Querying: Users ask questions in natural language. The backend, powered by FastAPI, processes these queries, with the OpenAI model interpreting them.
@@ -44,7 +48,8 @@ Data Processing: The PandasAI integration facilitates query execution and plots 
 
 Visualization: Streamlit displays any results, plots, or comparisons generated based on user queries.
 
-Live Demo
+**Live Demo**
+
 Backend (FastAPI): https://chatbot-mwsb.onrender.com
 
 Frontend (Streamlit): https://chatbot-fastapi.streamlit.app/
