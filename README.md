@@ -1,4 +1,6 @@
-Chatbot with FastAPI and Streamlit
+#Chatbot with FastAPI and Streamlit
+
+
 This project is a chatbot application designed to provide users with an intuitive interface to interact with datasets using natural language. The application leverages FastAPI for the backend processing and Streamlit for the frontend interface, offering users a seamless way to upload datasets, query them, and even compare two datasets interactively. The combination of cutting-edge technologies ensures that users can engage with their data in a conversational and visual manner.
 
 Features
