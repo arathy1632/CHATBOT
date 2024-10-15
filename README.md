@@ -55,9 +55,22 @@ Vector Store: FAISS is used for storing and searching vectorized text embeddings
 
 ## **How it looks like**
 
-## **Chat with your dataset**
+### **Chat with your dataset**
+
+Give your openai api key and dataset in the sidebar 
+
+**1. Chat Interface**
 
 <img width="955" alt="{E34BAC56-2A8D-48FF-BC69-7BE8ED1EC2F4}" src="https://github.com/user-attachments/assets/1483dd56-e108-4317-a8f6-1948370d7602">
+
+**2. Visualization**
+   
+<img width="958" alt="{8077EE3E-519F-4314-BF0F-F257E7485769}" src="https://github.com/user-attachments/assets/d1265b86-589a-4815-b614-b68d2fc75d8d">
+
+**3. Comparison**
+
+<img width="953" alt="{913E86E4-7B98-4CCB-9592-ADC8293541DE}" src="https://github.com/user-attachments/assets/ccb2268d-9397-4b5e-965b-ae6221b94660">
+
 
 
 
