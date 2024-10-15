@@ -57,5 +57,7 @@ Vector Store: FAISS is used for storing and searching vectorized text embeddings
 
 ## **Chat with your dataset**
 
+<img width="955" alt="{E34BAC56-2A8D-48FF-BC69-7BE8ED1EC2F4}" src="https://github.com/user-attachments/assets/1483dd56-e108-4317-a8f6-1948370d7602">
+
 
 
