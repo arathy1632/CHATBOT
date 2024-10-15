@@ -52,3 +52,10 @@ Vector Store: FAISS is used for storing and searching vectorized text embeddings
 **Backend (FastAPI):** https://chatbot-mwsb.onrender.com
 
 **Frontend (Streamlit):** https://chatbot-fastapi.streamlit.app/
+
+## **How it looks like**
+
+## **Chat with your dataset**
+
+
+
