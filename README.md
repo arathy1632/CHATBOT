@@ -30,7 +30,9 @@ Uvicorn (for running the FastAPI server)
 
 Utilizes OpenAI GPT-3.5-Turbo to process natural language queries and generate meaningful responses based on the data.
 
-Vector Store: FAISS is used for storing and searching vectorized text embeddings, allowing for efficient information retrieval from the uploaded datasets.
+**Vector Store:** 
+
+FAISS is used for storing and searching vectorized text embeddings, allowing for efficient information retrieval from the uploaded datasets.
 
 ## **Data Processing and Visualization:**
 
