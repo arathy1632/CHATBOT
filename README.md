@@ -3,17 +3,17 @@
 This project is a chatbot application designed to provide users with an intuitive interface to interact with datasets using natural language. The application leverages FastAPI for the backend processing and Streamlit for the frontend interface, offering users a seamless way to upload datasets, query them, and even compare two datasets interactively. The combination of cutting-edge technologies ensures that users can engage with their data in a conversational and visual manner.
 
 **Features**
-\begin{itemize}
-\item Dataset Uploading: Users can upload one or multiple datasets in various formats (e.g., CSV or Excel files).
 
-Conversational Interaction: Ask questions and query uploaded datasets in natural language through a chatbot interface. The backend processes these queries and returns the relevant results or visualizations.
+***** Dataset Uploading: Users can upload one or multiple datasets in various formats (e.g., CSV or Excel files).
 
-Dataset Comparison: Compare two datasets side-by-side to get insights or statistical comparisons based on user-defined queries.
+*****Conversational Interaction: Ask questions and query uploaded datasets in natural language through a chatbot interface. The backend processes these queries and returns the relevant results or visualizations.
 
-Streamlit Frontend: An easy-to-use, interactive web interface that allows users to upload datasets, ask questions, and view results with visual plots.
+*****Dataset Comparison: Compare two datasets side-by-side to get insights or statistical comparisons based on user-defined queries.
 
-FastAPI Backend: A powerful, fast backend that handles data processing, queries, and manages communication between the frontend and the conversational model.
-\end{itemize}
+*****Streamlit Frontend: An easy-to-use, interactive web interface that allows users to upload datasets, ask questions, and view results with visual plots.
+
+*****FastAPI Backend: A powerful, fast backend that handles data processing, queries, and manages communication between the frontend and the conversational model.
+
 **Technologies Used**
 
 Frontend: Streamlit (for building a user-friendly web interface)
