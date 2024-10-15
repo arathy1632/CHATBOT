@@ -163,7 +163,8 @@ if mode == "Chat with your dataset":
                 if output:
                     if response_type == 'image':
                         # Display the image using Streamlit
-                        st.image(output,caption=user_input)  # Here 'output' is the image bytes
+                        st.markdown(f"<h1 style='font-size:24px;'>{user_input}</h1>", unsafe_allow_html=True)
+                        st.image(output)  # Here 'output' is the image bytes
                     else:
                         # Display text response
                         st.session_state['past'].append(user_input)
