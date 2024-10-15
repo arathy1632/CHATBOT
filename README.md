@@ -1,35 +1,48 @@
-# Chatbot with FastAPI and Streamlit
+Chatbot with FastAPI and Streamlit
+This project is a chatbot application designed to provide users with an intuitive interface to interact with datasets using natural language. The application leverages FastAPI for the backend processing and Streamlit for the frontend interface, offering users a seamless way to upload datasets, query them, and even compare two datasets interactively. The combination of cutting-edge technologies ensures that users can engage with their data in a conversational and visual manner.
 
-This project is a chatbot application that uses FastAPI for the backend and Streamlit for the frontend. Users can upload datasets, query the data, and even compare two datasets through an interactive web interface.
+Features
+Dataset Uploading: Users can upload one or multiple datasets in various formats (e.g., CSV or Excel files).
 
-The FastAPI backend processes the data, and the Streamlit frontend provides a simple and interactive way to communicate with the backend and visualize the results.
+Conversational Interaction: Ask questions and query uploaded datasets in natural language through a chatbot interface. The backend processes these queries and returns the relevant results or visualizations.
 
-## Features
+Dataset Comparison: Compare two datasets side-by-side to get insights or statistical comparisons based on user-defined queries.
 
-Dataset Uploading: Upload single or multiple datasets (e.g., CSV or Excel files).
+Streamlit Frontend: An easy-to-use, interactive web interface that allows users to upload datasets, ask questions, and view results with visual plots.
 
-Conversational Interaction: Query uploaded datasets in natural language.
+FastAPI Backend: A powerful, fast backend that handles data processing, queries, and manages communication between the frontend and the conversational model.
 
-Dataset Comparison: Compare two datasets and get insights based on user questions.
+Technologies Used
+Frontend: Streamlit (for building a user-friendly web interface)
 
-Streamlit Frontend: Easy-to-use web interface for interaction.
+Backend:
 
-FastAPI Backend: Powerful API for processing data and managing chat requests.
+FastAPI (for handling API requests)
+Uvicorn (for running the FastAPI server)
+Retrieval Augmented Generation (RAG):
 
-## Technologies Used
+Utilizes OpenAI GPT-3.5-Turbo to process natural language queries and generate meaningful responses based on the data.
+Vector Store: FAISS (Facebook AI Similarity Search) is used for storing and searching vectorized text embeddings, allowing for efficient information retrieval from the uploaded datasets.
 
-Frontend: Streamlit
+Data Processing and Visualization:
 
-Backend: FastAPI, Uvicorn
+Pandas: For handling and manipulating the uploaded datasets.
+PandasAI: A wrapper around Pandas, used for executing complex queries, calculations, and plotting charts based on natural language questions. This simplifies interaction and analysis by allowing users to ask for plots and calculations directly.
+Other Libraries:
 
-Retreival Augmented Generation: OpenAI gpt-3.5-turbo model 
+Langchain: Orchestrates communication between the OpenAI model and data management processes.
+Requests: For handling HTTP requests.
+Streamlit-Chat: To manage the chatbot-like conversation interface on the frontend.
+Workflow Overview
+Data Upload: Users upload datasets via the Streamlit interface.
 
-Vector Store: FAISS
+Conversational Querying: Users ask questions in natural language. The backend, powered by FastAPI, processes these queries, with the OpenAI model interpreting them.
 
-Other Libraries: Pandas, Langchain, Requests, and Streamlit-Chat
+Data Processing: The PandasAI integration facilitates query execution and plots based on user questions, whether they relate to data filtering, comparison, or statistical operations.
 
-## Live Demo
+Visualization: Streamlit displays any results, plots, or comparisons generated based on user queries.
 
+Live Demo
 Backend (FastAPI): https://chatbot-mwsb.onrender.com
 
-Frontend (Streamlit): https://chatbot-meefpragk7bgl3tb8x7mhv.streamlit.app/
+Frontend (Streamlit): https://chatbot-fastapi.streamlit.app/
