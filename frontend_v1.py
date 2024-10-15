@@ -163,7 +163,7 @@ if mode == "Chat with your dataset":
                 if output:
                     if response_type == 'image':
                         # Display the image using Streamlit
-                        st.image(output)  # Here 'output' is the image bytes
+                        st.image(output,caption=user_input)  # Here 'output' is the image bytes
                     else:
                         # Display text response
                         st.session_state['past'].append(user_input)
