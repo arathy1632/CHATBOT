@@ -23,7 +23,19 @@ mode = st.sidebar.selectbox(
 BACKEND_URL = "https://chatbot-mwsb.onrender.com"
 
 # Keywords to trigger PandasAI block
-keywords = ["plot", "graph", "calculate", "how many", "sum", "average", "mean", "median", "max", "min"]
+keywords = [
+    # Plotting and Visualization related keywords
+    "plot", "graph", "chart", "visualization", "vizualization", "visualize", "vizualize", "graphical",
+    "scatterplot", "lineplot", "barplot", "histogram", "heatmap", "boxplot", "pie chart", "scatter", 
+    "distribution", "trend", "correlation", "relationship", "comparison", "plotly", "matplotlib", "seaborn",
+    
+    # Calculation related keywords
+    "how much", "how many", "maximum", "minimum", "sum", "average", "mean", "median", "max", "min", 
+    "total", "count", "range", "variance", "standard deviation", "std dev", "mode", "proportion", 
+    "percentage", "percent", "ratio", "calculate", "compute", "aggregation", "aggregate", "frequency", 
+    "quantile", "quartile", "percentile", "difference", "interval", "spread", "statistics", "statistical", 
+    "correlation coefficient", "covariance"
+]
 def compare_datasets(query):
     payload = {
         "query": query,
